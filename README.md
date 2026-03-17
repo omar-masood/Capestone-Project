@@ -11,16 +11,16 @@ This project embodies modern DevOps methodologies, utilizing Infrastructure as C
 ![Project Architecture Infographic](./project_architecture.png)
 
 ### 🖥️ Virtual Machine Inventory
-The entire virtualized environment is hosted across an internally routed subnet (`192.168.0.0/24`) consisting of the following purpose-built nodes:
+The entire virtualized environment is hosted across an internally routed subnet (`10.0.0.0/24`) consisting of the following purpose-built nodes:
 
 | Hostname | IP Address | Primary Role | Technical Stack |
 |----------|------------|--------------|-----------------|
-| `prdx-dprimary101` | `.58` | Internal BIND DNS Server | BIND9, Firewalld |
-| `prdx-haproxy101` | `.56` | L7 TCP/HTTP Load Balancer | HAProxy, Firewalld |
-| `prdx-webserver[1-3]` | `.53-.55` | Clustered Web Backends | Apache (httpd), Firewalld |
-| `prdx-db101` | `.60` | **Standalone** Database Primary | MariaDB (Percona/MySQL), Firewalld |
-| `prdx-kube101` | `.59` | Kubernetes (Kind) Cluster | Docker, Kind, Ingress-Nginx, Helm |
-| `prdx-nagios101` | `.57` | Health Monitoring Server | Nagios Core, NRPE |
+| `prdx-dprimary101` | `.135` | Internal BIND DNS Server | BIND9, Firewalld |
+| `prdx-haproxy101` | `.133` | L7 TCP/HTTP Load Balancer | HAProxy, Firewalld |
+| `prdx-webserver[1-3]` | `.101-.103` | Clustered Web Backends | Apache (httpd), Firewalld |
+| `prdx-db101` | `.129` | **Standalone** Database Primary | MariaDB (Percona/MySQL), Firewalld |
+| `prdx-kube101` | `.136` | Kubernetes (Kind) Cluster | Docker, Kind, Ingress-Nginx, Helm |
+| `prdx-nagios101` | `.134` | Health Monitoring Server | Nagios Core, NRPE |
 
 ---
 
